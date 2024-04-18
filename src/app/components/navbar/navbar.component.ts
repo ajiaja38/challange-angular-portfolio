@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { SplitButtonModule } from 'primeng/splitbutton';
 
 @Component({
   selector: 'app-navbar',

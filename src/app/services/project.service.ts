@@ -26,6 +26,25 @@ export class ProjectService {
       description:
         'Website Agency, website untuk menawarkan jasa digital marketing',
     },
+    {
+      name: 'Website Cloud',
+      imageUrl:
+        'https://cdn.dribbble.com/userupload/12834052/file/original-fd5eb1cf1a762030dabd0d02ffee4ab5.png?resize=320x240&vertical=center',
+      description: 'Website Cloud, website untuk menawarkan jasa cloud hosting',
+    },
+    {
+      name: 'Website Web3 Project',
+      imageUrl:
+        'https://cdn.dribbble.com/userupload/4847341/file/original-3de2d079cf02fea56908cdd9c4079db3.png?resize=320x240&vertical=center',
+      description: 'Website Web3 Project, website untuk menawarkan jasa web3',
+    },
+    {
+      name: 'Model CNN',
+      imageUrl:
+        'https://cdn.dribbble.com/userupload/9282656/file/original-eb2d85d673d129eaa36edd753af71dea.png?resize=320x240&vertical=center',
+      description:
+        'Model Machine Learning untuk openCV dan integrasi dengan esp32 cam',
+    },
   ];
 
   constructor() {}
