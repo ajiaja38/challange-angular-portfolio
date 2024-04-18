@@ -1,0 +1,22 @@
+<div class="card flex justify-content-center">
+  <p-card [header]="this.name" [style]="{ width: '360px' }">
+    <ng-template pTemplate="header">
+      <img [src]="this.imageUrl" class="rounded-t-lg" [alt]="this.name" />
+    </ng-template>
+    <p>
+      {{ this.description }}
+    </p>
+    <ng-template pTemplate="footer">
+      <p-button
+        (onClick)="
+          onDetailClick({
+            name: this.name,
+            imageUrl: this.imageUrl,
+            description: this.description
+          })
+        "
+        label="Detail"
+      ></p-button>
+    </ng-template>
+  </p-card>
+</div>

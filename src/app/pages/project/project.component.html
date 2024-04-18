@@ -1,0 +1,45 @@
+<div class="pt-[6rem] py-6">
+  @defer {
+  <h1 class="text-3xl font-extrabold text-center mb-7">Project Gueh</h1>
+  <div
+    class="w-full grid grid-cols-1 lg:grid-cols-3 place-items-center gap-3 my-3"
+  >
+    @for (project of projects; track $index) {
+    <card-project
+      [name]="project.name"
+      [imageUrl]="project.imageUrl"
+      [description]="project.description"
+      (dataDetailClick)="getProjectDetail($event)"
+      (detailVisible)="setDetailVisible($event)"
+    />
+    }
+  </div>
+  } @loading (minimum 2s) {
+  <div
+    class="w-full grid grid-cols-1 lg:grid-cols-3 place-items-center gap-3 my-3"
+  >
+    <card-skeleton />
+    <card-skeleton />
+    <card-skeleton />
+    <card-skeleton />
+    <card-skeleton />
+    <card-skeleton />
+  </div>
+  }
+</div>
+<p-dialog
+  header="Detail Project"
+  [modal]="true"
+  [(visible)]="visible"
+  [style]="{ width: '50vw' }"
+>
+  <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+    <img [src]="this.projectDetail.imageUrl" class="rounded-lg" />
+    <div class="flex flex-col gap-2">
+      <h1 class="text-3xl font-bold">{{ this.projectDetail.name }}</h1>
+      <p>
+        {{ this.projectDetail.description }}
+      </p>
+    </div>
+  </div>
+</p-dialog>
